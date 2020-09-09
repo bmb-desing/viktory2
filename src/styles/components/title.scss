@@ -1,0 +1,58 @@
+.title {
+  font-family: $Cormorant;
+  padding: 0;
+  margin: 0;
+  &_white {
+    color: $whiteColor;
+  }
+  &_line {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      right: 105%;
+      top: 35px;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, #A2874C 0%, #D5BE6D 100%);
+    }
+  }
+  &_dark {
+    color: #0E0C17;
+  }
+  &_second {
+    line-height: 1.2;
+    font-weight: 500;
+    @include em(32);
+  }
+  &_services {
+    text-align: center;
+    font-weight: 600;
+    @include em(28)
+  }
+}
+
+@include media-custom(480px) {
+  .title {
+     &_second {
+       @include em(40)
+     }
+  }
+}
+@include media-custom(768px) {
+  .title {
+    &_second {
+      @include em(56)
+    }
+    &_services {
+      @include em(32)
+    }
+  }
+}
+@include media-custom(992px) {
+  .title {
+    &_services {
+      @include em(40)
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.loader {
+  position: fixed;
+  z-index: $loaderIndex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../img/texture.jpg');
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__svg {
+    width: 300px;
+  }
+  &__absolute {
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 300px;
+    overflow: hidden;
+    animation: logoWidth 3s linear normal running 0s;
+  }
+  &__logo {
+    position: relative;
+  }
+}
+
+@keyframes logoWidth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 300px;
+  }
+}

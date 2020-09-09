@@ -1,0 +1,21 @@
+.section {
+  &_grey {
+    background-color: #F6F6F6;
+  }
+  &_default {
+    padding: 2em 0;
+  }
+  &_first {
+    padding-top: 4em;
+  }
+}
+@include media-custom(768px) {
+  .section {
+    &_default {
+      padding: 3.25em 0;
+    }
+    &_first {
+      padding-top: 6.5em;
+    }
+  }
+}

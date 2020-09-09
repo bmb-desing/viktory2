@@ -1,7 +1,7 @@
 header.header
   .container.container_flex.container_aic.container_jcsb
     .header__burger
-      .header__menu
+      .header__menu.button.button_empty
         span
         span
         span
@@ -10,7 +10,7 @@ header.header
       a(href="/")
         svg(viewBox="0 0 369 103")
           use(xlink:href="#logo")
-    .header__callback.modal-open(data-theme="Оставить заявку")
+    .header__callback.button.button_full.modal-open(data-theme="Оставить заявку")
       svg(viewBox="0 0 14 14")
         use(xlink:href="#phone")
       p.header__text Заказать звонок
