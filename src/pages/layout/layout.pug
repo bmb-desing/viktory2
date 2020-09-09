@@ -1,0 +1,20 @@
+doctype html
+html(lang="ru")
+  block head
+    head
+      include common/head
+  body.body
+    .page
+      .page__wrapper
+        .page__header
+          block header
+            include components/header
+        .page__content
+          block content
+      .page__footer
+        block footer
+          include components/footer
+    block scripts
+      include common/footer
+      .page-svg
+        include ../../img/sprite.svg

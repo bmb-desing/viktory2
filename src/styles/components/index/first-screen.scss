@@ -1,0 +1,34 @@
+.first-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(14, 12, 23, 0.95) 0%, rgba(14, 13, 23, 0.35) 141.62%);
+  }
+  &__top {
+    height: 80px;
+  }
+  &__item {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+}
+
+@include media-custom(768px) {
+  .first-screen {
+    &__top {
+      height: 116px;
+    }
+  }
+}

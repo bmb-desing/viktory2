@@ -1,0 +1,14 @@
+form.form(action="#")
+  .form__title Оставьте заявку и наш специалист свяжется с вами
+  .form__item
+    input.form__input(type="text" placeholder="Ваше имя*" name="name")
+  .form__item
+    input.form__input.form__input_phone(type="text" placeholder="Ваше телефон*" name="phone")
+  .form__item.form__item_textarea
+    textarea.form__textarea(name="message" rows='1' placeholder="Ваш запрос")
+  .form__item.form__button
+    .form__wrap
+      button(type="submit") Отправить
+      .form__policy
+        p Отправляя заявку вы даёте согласие с 
+          a(href="politika.pdf" target="_blank") политикой конфендициальности
