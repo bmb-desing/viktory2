@@ -28,6 +28,14 @@ $(document).ready(() => {
     Waves.init()
     // eslint-disable-next-line no-undef
     Waves.attach(`.button`, `waves-light`)
+
+
+    $(`.portfolio`).hover(function () {
+        // eslint-disable-next-line no-invalid-this
+        const bg = $(this).attr(`data-image`)
+        console.log(bg)
+        $(`.section_portfolio`).css(`background-image`, `url(${bg})`)
+    })
 })
 function changeCurrentFirstScreenSlider(current, count) {
     const persent = ((current + 1) / count * 100)

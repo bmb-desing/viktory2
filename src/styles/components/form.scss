@@ -1,0 +1,75 @@
+.form {
+  &_pad-top {
+    padding-top: 2em;
+  }
+  &__item {
+    width: 100%;
+    padding-bottom: 2em;
+    position: relative;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  &__error {
+    padding-top: 0.5em;
+    color: red;
+    @include em(12)
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    button {
+      width: 100%;
+      flex-basis: 49%;
+      padding: 1.2em 0;
+      margin-bottom: 1em;
+    }
+  }
+  &__policy {
+    @include em(14);
+    color: #0E0C17;
+    flex-basis: 49%;
+    line-height: 1.1;
+    a {
+      color: $accentColor;
+    }
+  }
+  &__input, &__textarea {
+    width: 100%;
+    resize: vertical;
+    outline: none;
+    font-family: $Cormorant;
+    @include em(18);
+    padding: 0.5em 0;
+    &::placeholder {
+      font-style: italic;
+    }
+    &_transparent {
+      background: transparent;
+      border: none;
+      &::placeholder {
+        color: rgba(#0E0C17, .8);
+      }
+    }
+    &_border-grey {
+      border-bottom: 1px solid rgba(#0e0c17, .25);
+      transition: all .5s;
+      color: #0E0C17;
+      &:hover {
+        border-color: #D5BE6D;
+      }
+    }
+  }
+}
+@include media-custom(768px) {
+  .form {
+    &__button {
+      flex-direction: row;
+      button {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

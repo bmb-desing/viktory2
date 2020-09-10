@@ -17,6 +17,13 @@
       background: linear-gradient(90deg, #A2874C 0%, #D5BE6D 100%);
     }
   }
+  &_italic {
+    font-style: italic;
+  }
+
+  &_blue {
+    color: $accentColor;
+  }
   &_dark {
     color: #0E0C17;
   }
@@ -29,6 +36,12 @@
     text-align: center;
     font-weight: 600;
     @include em(28)
+  }
+  &_left {
+    text-align: left;
+  }
+  &_callback {
+    line-height: 1.2;
   }
 }
 

@@ -108,6 +108,11 @@
     &__text {
       display: block;
     }
+    &__logo {
+      svg {
+        max-width: 240px;
+      }
+    }
     &__toggle {
       display: block;
     }
