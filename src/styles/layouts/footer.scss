@@ -1,0 +1,231 @@
+.footer {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 1px;
+    height: 60px;
+    z-index: 1;
+    background: linear-gradient(90deg, #A2874C 0%, #D5BE6D 100%);
+    transform: translateY(50%);
+  }
+  &::after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(14, 12, 23, 0.75);
+  }
+  .container {
+    z-index: 2;
+    position: relative;
+  }
+
+  &__logo {
+    max-width: 150px;
+    margin: 0 auto;
+    svg {
+      width: 100%;
+    }
+  }
+  &__menu {
+    padding: 1em 0;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      li {
+        text-align: center;
+        margin-bottom: 0.5em;
+        &.active {
+          a {
+            color: $accentColor;
+          }
+        }
+      }
+      a {
+        transition: all .5s;
+        font-family: $Circe;
+        font-weight: bold;
+        color: $whiteColor;
+        @include em(16);
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      span {
+        position: absolute;
+        color: $accentColor;
+        top: -5px;
+        right: -12px;
+        @include em(14)
+      }
+    }
+  }
+  &__contacts {
+    display: flex;
+    padding-top: 1em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__phones, &__mail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    span {
+      display: none;
+      color: #fff;
+      padding: 0 .5em;
+    }
+    a {
+      @include em(18);
+      margin-bottom: 0.5em;
+      text-decoration: none;
+      transition: all .5s;
+      font-weight: bold;
+      color: #fff;
+      &:hover {
+        color: $accentColor;
+      }
+    }
+  }
+  &__mail {
+    a {
+      font-weight: normal;
+      text-decoration: underline;
+    }
+  }
+  &__social {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 1em;
+    padding: 0;
+    max-width: 300px;
+    width: 100%;
+    justify-content: space-between;
+    list-style-type: none;
+    a {
+      opacity: 0.45;
+      border: 1px solid #FFFFFF;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      @include em(14);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all .5s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  &__top {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    margin-top: 3em;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      margin: 0 auto;
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 1px;
+        width: 45%;
+        max-width: 0px;
+        background: #FFFFFF;
+        opacity: 0.15;
+      }
+      &::before {
+        left: 0;
+      }
+      &::after {
+        right: 0;
+      }
+    }
+  }
+  &__policy {
+    padding-top: 2em;
+    padding-bottom: 0.5em;
+    text-align: center;
+    a {
+      font-weight: 300;
+      font-family: $Circe;
+      @include em(14);
+      color: #fff;
+    }
+  }
+  &__copyright {
+    color: #fff;
+    @include em(16);
+    text-align: center;
+  }
+}
+@include media-custom(768px) {
+  .footer {
+    &::before {
+      height: 160px;
+    }
+
+    &__menu {
+      padding-top: 3em;
+      padding-bottom: 2em;
+      border-bottom: 1px solid rgba(#fff, .15);
+      ul {
+        justify-content: space-between;
+        max-width: 968px;
+        margin: 0 auto;
+        flex-direction: row;
+        li {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &__contacts {
+      padding-top: 2em;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__phones {
+      flex-direction: row;
+      span {
+        display: block;
+      }
+    }
+    &__top {
+      a {
+        &::before, &::after {
+          max-width: 256px;
+        }
+      }
+    }
+    &__social {
+      margin-top: 0em;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}

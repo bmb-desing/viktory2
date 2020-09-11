@@ -20,6 +20,9 @@
   &_italic {
     font-style: italic;
   }
+  &_center {
+    text-align: center;
+  }
 
   &_blue {
     color: $accentColor;

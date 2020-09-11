@@ -1,14 +1,35 @@
 section.section.section_pad-top.section_default
-  .container.container_material.section_background(style="background-image: url(/img/texture.jpg)")
+  .container.container_material.section_background.wow.fadeIn(style="background-image: url(/img/texture.jpg)")
     h2.title.title_services.title_white.title_left.title_material Материалы фасада
     .container_flex.container_jcsb.material.container_wrap
       .material__left
         .material__tabs
-          .material__tab.active(data-type="plenka" data-image="/img/material/1.jpg") Пленка
-          .material__tab(data-type="derevo" data-image="/img/material/1.jpg") Массив дерева
-          .material__tab(data-type="plastik" data-image="/img/material/1.jpg") Пластик
-          .material__tab(data-type="emal" data-image="/img/material/1.jpg") Эмаль
+          .material__tab.active(data-type="plenka" data-image="/img/material/1.jpg" data-link="#") Пленка
+          .material__tab(data-type="derevo" data-link="#" data-image="/img/material/1.jpg") Массив дерева
+          .material__tab(data-type="plastik" data-link="#" data-image="/img/material/1.jpg") Пластик
+          .material__tab(data-type="emal" data-link="#" data-image="/img/material/1.jpg") Эмаль
+        .material__content
+          .material__text.context.content_material.active(data-text="plenka")
+            p С фрезеровкой
+            p Разнообразие форм
+            p Палитра цветов
+          .material__text.context.content_material(data-text="derevo")
+            p С фрезеровкой
+            p Разнообразие форм
+            p Палитра цветов
+          .material__text.context.content_material(data-text="plastik")
+            p С фрезеровкой
+            p Разнообразие форм
+            p Палитра цветов
+          .material__text.context.content_material(data-text="emal")
+            p С фрезеровкой
+            p Разнообразие форм
+            p Палитра цветов
+        .material__link
+          a.button.button_full(href="#") Подробнее
+            <svg width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.0909 0.666992L20.1616 1.60699L23.8393 5.33366L0 5.33366L0 6.66699L23.8393 6.66699L20.1616 10.3937L21.0909 11.3337L26.3636 6.00032L21.0909 0.666992Z" fill="white"/>
+            </svg>
       .material__right
         img.material__image(src="/img/material/1.jpg" alt="Пленка")
-
 
