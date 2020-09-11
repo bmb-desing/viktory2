@@ -1,20 +1,23 @@
 .header {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   right: 0;
   z-index: $headerIndex;
   padding: 1em 0;
+
   &__logo {
     flex-basis: auto;
     text-align: center;
     order: 2;
+
     svg {
       width: 100%;
       max-width: 170px;
       vertical-align: top;
     }
   }
+
   &__burger {
     order: 1;
     text-align: left;
@@ -23,6 +26,7 @@
     align-items: center;
     cursor: pointer;
   }
+
   &__callback {
     order: 3;
     flex-basis: 48px;
@@ -34,11 +38,13 @@
     border-radius: 10em;
     cursor: pointer;
     transition: all .5s;
+
     svg {
       width: 14px;
       vertical-align: top;
     }
   }
+
   &__text {
     display: none;
     font-family: $Circe;
@@ -48,6 +54,7 @@
     color: $whiteColor;
     padding-left: 0.8em;
   }
+
   &__toggle {
     display: none;
     padding-left: 1em;
@@ -58,13 +65,13 @@
     font-family: $Cormorant;
     text-transform: uppercase;
   }
+
   &__menu {
     width: 48px;
     height: 48px;
     border-radius: 10em;
     border: 1px solid #fff;
     position: relative;
-    transition: all .5s;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -73,31 +80,43 @@
     align-items: center;
     background-color: transparent;
     overflow: hidden;
+
     &::before {
       border-radius: 10em;
     }
+
     span {
       height: 1px;
-      transition: all .5s;
       background-color: #fff;
       width: 12px;
       position: relative;
       z-index: 2;
+      transition: all .25s;
+
       &:first-child {
         width: 16px;
       }
+
       &:last-child {
         width: 16px;
       }
     }
-
-    &:hover {
-      border-color: transparent;
+    &_close {
       span {
         width: 24px;
+        &:first-child {
+          transform: translateY(7px) rotate(45deg);
+        }
+        &:last-child {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
       }
     }
   }
+
 }
 @include media-custom(768px) {
   .header {
@@ -110,7 +129,7 @@
     }
     &__logo {
       svg {
-        max-width: 240px;
+        max-width: 185px;
       }
     }
     &__toggle {

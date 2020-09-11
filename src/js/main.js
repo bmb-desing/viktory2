@@ -73,6 +73,20 @@ $(document).ready(() => {
         }, 800)
         return false
     })
+    $(`.header__burger`).click(function () {
+        $(this).toggleClass(`active`)
+        if ($(this).hasClass(`active`)) {
+            $(`.header__toggle`).text(`Закрыть`)
+            $(`.header__menu`).addClass(`header__menu_close`)
+            $(`.nav`).slideDown()
+            $(`body`).addClass(`hidden`)
+        } else {
+            $(`.header__toggle`).text(`Меню`)
+            $(`.nav`).slideUp()
+            $(`.header__menu`).removeClass(`header__menu_close`)
+            $(`body`).removeClass(`hidden`)
+        }
+    })
 })
 function changeCurrentFirstScreenSlider(current, count) {
     const persent = ((current + 1) / count * 100)
