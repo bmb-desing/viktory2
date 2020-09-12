@@ -1,17 +1,19 @@
 header.header
   .container.container_flex.container_aic.container_jcsb
     .header__burger
-      .header__menu
-        span
-        span
-        span
-      p.header__toggle Меню
+      .header__open
+        .header__menu
+          span
+          span
+          span
+        p.header__toggle Меню
     .header__logo
       a(href="/")
         svg(viewBox="0 0 369 103")
           use(xlink:href="#logo")
-    .header__callback.button.button_full.modal-open(data-theme="Оставить заявку")
-      svg(viewBox="0 0 14 14")
-        use(xlink:href="#phone")
-      p.header__text Заказать звонок
+    .header__callback
+      .header__button.button.button_full.modal-open(data-theme="Оставить заявку")
+        svg(viewBox="0 0 14 14")
+          use(xlink:href="#phone")
+        p.header__text Заказать звонок
 

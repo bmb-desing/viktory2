@@ -1,6 +1,7 @@
 .first-screen {
   min-height: 100vh;
   position: relative;
+
   &__item {
     position: relative;
     background-size: cover;
@@ -10,8 +11,9 @@
     flex-direction: column;
     justify-content: center;
     z-index: 4;
+
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -21,37 +23,42 @@
       height: 100%;
       background: linear-gradient(180deg, rgba(14, 12, 23, 0.95) 0%, rgba(14, 13, 23, 0.35) 141.62%);
     }
+
     .container {
       position: relative;
       z-index: 10;
       padding: 85px 10px;
     }
   }
+
   &__title {
     max-width: 750px;
     margin: 0 auto;
     text-align: center;
     font-weight: normal;
     line-height: 1;
-    @include em(40)
-  }
+
+    @include em(40); }
+
   &__line {
-    opacity: .35;
+    opacity: 0.35;
     width: 64px;
     border: none;
     height: 1px;
     background-color: $whiteColor;
     margin: 1em auto;
   }
+
   &__button {
     text-align: center;
+
     a {
       display: inline-block;
       padding: 1em 2em;
 
-      @include em(12)
-    }
+      @include em(12); }
   }
+
   &__navigation {
     position: absolute;
     padding-bottom: 1em;
@@ -60,15 +67,18 @@
     bottom: 0;
     width: 100%;
     z-index: 4;
+
     .container {
       flex-direction: column-reverse;
     }
   }
+
   &__right {
     max-width: 200px;
     width: 100%;
     padding-bottom: 0.5em;
   }
+
   &__left {
     display: flex;
     width: 100%;
@@ -76,44 +86,52 @@
     justify-content: center;
     align-items: center;
   }
+
   &__text {
     font-family: $Circe;
     font-weight: normal;
+
     @include em(16);
+
     color: $whiteColor;
   }
+
   &__load {
     position: relative;
     height: 1px;
     width: 32px;
     background-color: $whiteColor;
     margin: 0 0.5em;
+
     span {
       position: absolute;
       top: 0;
       left: 0;
-      transition: all .5s;
+      transition: all 0.5s;
       bottom: 0;
       height: 100%;
-      background: linear-gradient(90deg, #D5BE6D 0%, #A2874C 100%);
+      background: linear-gradient(90deg, #d5be6d 0%, #a2874c 100%);
     }
   }
+
   &__buttons {
     display: flex;
     align-items: center;
     padding-left: 2em;
-
   }
+
   &__nav {
     display: flex;
     align-items: center;
     width: 48px;
     height: 48px;
     margin: 0 2px;
+
     svg {
       height: 12px;
     }
   }
+
   &__social {
     display: flex;
     justify-content: space-between;
@@ -121,15 +139,18 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
+
     a {
       color: $whiteColor;
       text-decoration: none;
-      transition: all .5s;
+      transition: all 0.5s;
+
       &:hover {
-        color: #D5BE6D;
+        color: #d5be6d;
       }
     }
   }
+
   &__info {
     display: flex;
     justify-content: space-between;
@@ -142,48 +163,57 @@
     &__left {
       justify-content: flex-start;
     }
+
     &__title {
-      @include em(48)
-    }
+
+      @include em(48); }
+
     &__navigation {
       .container {
         flex-direction: row;
       }
     }
+
     &__right {
       padding-bottom: 0;
     }
   }
 }
+
 @include media-custom(768px) {
   .first-screen {
     &__title {
-      @include em(64)
-    }
+
+      @include em(64); }
+
     &__item {
       .container {
         padding-top: 120px;
         padding-bottom: 120px;
       }
     }
+
     &__navigation {
       padding-bottom: 2em;
     }
   }
 }
+
 @include media-custom(992px) {
   .first-screen {
     &__title {
-      @include em(80)
-    }
+
+      @include em(80); }
+
     &__line {
       margin-top: 2em;
       margin-bottom: 2em;
     }
+
     &__button {
       a {
-        @include em(16)
-      }
+
+        @include em(16); }
     }
   }
 }

@@ -1,28 +1,35 @@
 .section {
   &_grey {
-    background-color: #F6F6F6;
+    background-color: #f6f6f6;
   }
+
   &_default {
     padding: 2em 0;
   }
+
   &_first {
     padding-top: 4em;
   }
+
   &_pad-top {
     padding-top: 4em;
   }
+
   &_pad-bottom {
     padding-bottom: 4em;
   }
+
   &_background {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
+
   &_darken {
     position: relative;
+
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       bottom: 0;
@@ -32,6 +39,7 @@
       z-index: 1;
       background: rgba(14, 12, 23, 0.75);
     }
+
     .container {
       position: relative;
       z-index: 3;
@@ -40,85 +48,100 @@
 
   &_about {
     position: relative;
+
     &::before {
-      content: 'О нас';
+      content: "О нас";
       position: absolute;
-      top:0;
+      top: 0;
       left: 50%;
       display: none;
       transform: translateX(-50%);
+
       @include em(240);
+
       line-height: 1;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: #FFFFFF;
+      color: #ffffff;
       opacity: 0.04;
       z-index: 2;
       font-family: $Cormorant;
       font-weight: 500;
     }
   }
+
   &_about-second {
     &::after {
       background: linear-gradient(180deg, rgba(14, 12, 23, 0.95) 0%, rgba(14, 12, 23, 0.35) 123.94%);
     }
   }
-
 }
+
 @include media-custom(768px) {
   .section {
     &_about {
       &::before {
         display: block;
+
         @include em(100);
       }
     }
+
     &_default {
       padding: 3.25em 0;
     }
+
     &_first {
       padding-top: 6.5em;
     }
+
     &_pad-top {
       padding-top: 6.5em;
     }
+
     &_pad-bottom {
       padding-bottom: 6.5em;
     }
   }
 }
+
 @include media-custom(992px) {
   .section {
     &_about {
       &::before {
         display: block;
+
         @include em(130);
       }
     }
+
     &_about-second {
       padding: 16.5em 0;
     }
   }
 }
+
 @include media-custom(1192px) {
   .section {
     &_about {
       &::before {
         display: block;
+
         @include em(160);
       }
     }
   }
 }
+
 @include media-custom(1700px) {
   .section {
     &_about {
       &::before {
         display: block;
+
         @include em(240);
       }
     }
   }
 }
-
 

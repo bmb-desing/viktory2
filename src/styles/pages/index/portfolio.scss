@@ -1,17 +1,19 @@
 .section_portfolio {
   padding: 4em 0;
 }
+
 .container_portfolio {
   margin-top: 1em;
 }
 
 .portfolio {
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   flex-basis: 100%;
   margin: 1em 0 0;
-  transition: all .5s;
+  transition: all 0.5s;
   padding: 0.5em;
   min-height: 120px;
+
   &-link {
     flex-basis: 100%;
     align-self: flex-end;
@@ -19,24 +21,31 @@
     font-style: italic;
     font-family: $Cormorant;
     padding-top: 2em;
+
     @include em(18);
+
     padding-bottom: 0.25em;
+
     a {
-      color: #fff;
+      color: #ffffff;
       text-decoration: none;
-      transition: all .5s;
+      transition: all 0.5s;
       padding-bottom: 0.25em;
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid #ffffff;
+
       svg {
         width: 25px;
         margin-left: 1em;
+
         * {
-          transition: all .5s;
+          transition: all 0.5s;
         }
       }
+
       &:hover {
         color: $accentColor;
         border-color: $accentColor;
+
         svg {
           * {
             fill: $accentColor !important;
@@ -45,9 +54,11 @@
       }
     }
   }
+
   a {
     text-decoration: none;
   }
+
   &__wrap {
     height: 100%;
     padding: 1.5em 1em;
@@ -55,83 +66,97 @@
     flex-direction: column;
     background: transparent;
     justify-content: space-between;
-    transition: all .5s;
+    transition: all 0.5s;
     position: relative;
+
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(273.93deg, #A2874C -1.08%, #D5BE6D 106%);
+      background: linear-gradient(273.93deg, #a2874c -1.08%, #d5be6d 106%);
       opacity: 0;
       z-index: -1;
-      transition: all .5s;
+      transition: all 0.5s;
     }
   }
+
   &__title {
     max-width: 180px;
     margin: 0;
     //position: relative;
     //z-index: 2;
     padding: 0;
-    transition: all .5s;
+    transition: all 0.5s;
     font-weight: bold;
     font-family: $Circe;
+
     a {
-      color: #fff;
-      transition: all .5s;
+      color: #ffffff;
+      transition: all 0.5s;
     }
-    @include em(16)
-  }
+
+    @include em(16); }
+
   &__category {
     text-transform: uppercase;
+
     @include em(12);
+
     a {
-      color: #fff;
-      transition: all .5s;
+      color: #ffffff;
+      transition: all 0.5s;
     }
   }
+
   &:hover {
-    border-color: #D5BE6D;
+    border-color: #d5be6d;
+
     .portfolio {
       &__wrap {
         &::after {
           opacity: 1;
         }
       }
+
       &__title {
         a {
-          color: #0E0C17;
+          color: #0e0c17;
         }
       }
+
       &__category {
         a {
-          color: #0E0C17;
+          color: #0e0c17;
         }
       }
     }
   }
 }
+
 @include media-custom(480px) {
   .portfolio {
-
     flex-basis: 49%;
+
     &-link {
       flex-basis: 49%;
     }
   }
 }
+
 @include media-custom(768px) {
   .section_portfolio {
     padding: 10.3em 0;
   }
 }
+
 @include media-custom(992px) {
   .portfolio {
     flex-basis: 24%;
     min-height: 160px;
+
     &-link {
       flex-basis: 24%;
     }

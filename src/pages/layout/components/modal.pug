@@ -1,0 +1,39 @@
+.modal.modal_success
+  .modal__wrapper
+    .modal__content.modal__content_small
+      .modal__wrap.modal__wrap_pad
+        h2.title.title_second.title_center.title_bold Спасибо!
+        .modal__text Ваша заявка принята и находится в обработке! Ожидайте звонка, наш специалист скоро с Вами свяжется.
+        .modal__button
+          a(href='#').modal-close.button.button_full Закрыть
+      .modal__cross.modal-close.modal__cross_success
+        <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="16" height="1" transform="rotate(45 1 1)" fill="white"/>
+        <rect y="12" width="16" height="1" transform="rotate(-45 0 12)" fill="white"/>
+        </svg>
+.modal.modal_form
+  .modal__wrapper
+    .modal__content.modal__content_form
+      .container_flex.container_wrap.container_ais.callback.wow.fadeIn
+            .callback__left.modal__left
+              h2.title.title_second.title_bold Заказать звонок
+              .modal__text.modal__text_left Оставьте свои контактные данные, наш сотрудник свяжется с Вами в ближайшее время
+              form.form.form_pad-top(action="#")
+                .form__item
+                  input.form__input.form__input_transparent.form__input_border-grey.form__input_error(type="text" placeholder="Ваше имя*" name="name")
+                  span.form__error 123
+                .form__item
+                  input.form__input.form__input_phone.form__input_transparent.form__input_border-grey(type="text" placeholder="Ваше телефон*" name="phone")
+                .form__item.form__item_textarea
+                  textarea.form__textarea.form__input_transparent.form__input_border-grey(name="message" rows='1' placeholder="Ваш запрос")
+                .form__item.form__button
+                  input(type="hidden" name="theme" value="Заявка на бесплатный замер")
+                  button.button.button_full.button_hover-dark(type="submit") Отправить
+                  .form__policy Отправляя заявку вы даёте согласие  <a href="politika.pdf" target="_blank">политикой конфендициальности</a>
+            .callback__right.modal__right
+              .callback__image.modal__image(style="background-image: url(/img/modal.jpg)")
+      .modal__cross.modal-close.modal__cross_form
+        <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="16" height="1" transform="rotate(45 1 1)" fill="white"/>
+        <rect y="12" width="16" height="1" transform="rotate(-45 0 12)" fill="white"/>
+        </svg>

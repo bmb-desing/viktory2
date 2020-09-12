@@ -1,7 +1,9 @@
 .content {
   &_about {
     padding: 1em 0;
+
     @include em(14);
+
     p {
       margin-top: 0;
       margin-bottom: 1em;
@@ -11,13 +13,13 @@
   &_white {
     color: $whiteColor;
   }
-
 }
+
 @include media-custom(768px) {
   .content {
     &_about {
       padding: 2em 0;
-      @include em(16)
-    }
+
+      @include em(16); }
   }
 }

@@ -73,7 +73,35 @@ $(document).ready(() => {
         }, 800)
         return false
     })
-    $(`.header__burger`).click(function () {
+    $(`.modal-close`).click(function (e) {
+        e.preventDefault()
+        $(`.modal`).removeClass(`open`)
+        $(`body`).removeClass(`hidden`)
+        $(`.modal`).fadeOut()
+        return false
+    })
+    $(`.modal-open`).click(function (e) {
+        e.preventDefault()
+        $(`.modal_form`).addClass(`open`)
+        const theme = $(this).attr(`data-theme`) || `Заказать звонок`
+        const title = $(this).attr(`data-title`) || `Заказать звонок`
+        $(`.modal_form input[name=theme]`).val(theme)
+        $(`.modal_form h2`).text(title)
+        $(`body`).addClass(`hidden`)
+        $(`.modal_form`).fadeIn()
+        return false
+    })
+    $(document).mouseup(function (e) {
+        if ($(`.modal`).hasClass(`open`)) {
+            const container = $(`.modal__content`)
+            if (container.has(e.target).length === 0) {
+                $(`body`).removeClass(`hidden`)
+                $(`.modal`).fadeOut()
+                $(`.modal`).removeClass(`open`)
+            }
+        }
+    })
+    $(`.header__open`).click(function () {
         $(this).toggleClass(`active`)
         if ($(this).hasClass(`active`)) {
             $(`.header__toggle`).text(`Закрыть`)

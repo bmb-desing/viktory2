@@ -2,18 +2,21 @@
   &__left {
     flex-basis: 100%;
   }
+
   &__right {
     flex-basis: 100%;
     position: relative;
     padding-top: 1em;
+
     img {
       width: 100%;
       max-width: 768px;
       vertical-align: top;
       z-index: 1;
-      filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.25));
+      filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.25));
     }
   }
+
   &-second {
     margin: 0;
     color: $whiteColor;
@@ -21,14 +24,16 @@
     font-weight: 500;
     line-height: 1.2;
     text-align: center;
-    @include em(22)
-  }
+
+    @include em(22); }
+
   &__image {
     position: relative;
     margin-right: 20px;
+
     &::after {
       z-index: 2;
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -36,11 +41,12 @@
       bottom: 0;
       width: 100%;
       height: 100%;
-      border: 1px solid #D5BE6D;
+      border: 1px solid #d5be6d;
       transform: translateX(20px) translateY(-20px);
       //border-image: linear-gradient(273.93deg, #A2874C -1.08%, #D5BE6D 106%);
     }
   }
+
   &__button {
     a {
       text-align: center;
@@ -48,61 +54,73 @@
       padding: 1em 0;
       max-width: 240px;
     }
+
     &_show {
       display: none;
     }
+
     &_hide {
       display: block;
       padding-top: 1em;
+
       a {
         margin: 0 auto;
       }
     }
   }
 }
+
 @include media-custom(480px) {
   .about {
     &-second {
-      @include em(24)
-    }
+
+      @include em(24); }
   }
 }
+
 @include media-custom(768px) {
   .about {
     &-second {
-      @include em(32)
-    }
+
+      @include em(32); }
+
     &__left {
       flex-basis: 55%;
     }
+
     &__right {
       flex-basis: 43%;
       padding-top: 3em;
     }
+
     &__image {
       position: absolute;
     }
+
     &__button {
       &_show {
         display: block;
       }
+
       &_hide {
         display: none;
       }
     }
   }
 }
+
 @include media-custom(992px) {
   .about {
     &-second {
-      @include em(40)
-    }
+
+      @include em(40); }
   }
 }
+
 @include media-custom(1170px) {
   .about {
     &-second {
-      @include em(56)
-    }
+
+      @include em(56); }
   }
 }

@@ -1,0 +1,144 @@
+.modal {
+  display: none;
+  position: relative;
+
+  &_success {
+    z-index: $modalSuccessIndex;
+  }
+
+  &_form {
+    z-index: $modalFormIndex;
+  }
+
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    right: 0;
+    bottom: 0;
+    background: rgba(14, 12, 23, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    background: #f6f6f6;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    width: 100%;
+
+    &_small {
+      max-width: 400px;
+    }
+
+    &_form {
+      max-width: 960px;
+    }
+  }
+
+  &__wrap {
+    padding: 3em 2em;
+
+    &_pad {
+      padding: 3em 2em;
+    }
+  }
+
+  &__text {
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    @include em(16);
+
+    font-family: $Circe;
+    color: rgba(14, 12, 23, 0.75);
+    text-align: center;
+
+    &_left {
+      text-align: left;
+    }
+  }
+
+  &__button {
+    a {
+      display: block;
+      max-width: 200px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      padding: 1em 0;
+    }
+  }
+
+  &__cross {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
+    border: 1px solid #000000;
+    border-radius: 10em;
+
+    svg {
+      vertical-align: top;
+
+      * {
+        fill: #000000;
+      }
+    }
+  }
+
+  &__left {
+    flex-basis: 60%;
+  }
+
+  &__right {
+    flex-basis: 40%;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@include media-custom(550px) {
+  .modal {
+    &__cross {
+      &_success {
+        border-color: #ffffff;
+        top: -3em;
+        right: -3em;
+
+        svg {
+          * {
+            fill: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-custom(768px) {
+  .modal {
+    &__wrap {
+      &_pad {
+        padding: 7em 2em;
+      }
+    }
+
+    &__left {
+      flex-basis: 55%;
+    }
+
+    &__right {
+      flex-basis: 45%;
+    }
+  }
+}

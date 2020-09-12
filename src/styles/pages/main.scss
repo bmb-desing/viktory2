@@ -2,18 +2,23 @@
   .container {
     flex-direction: column;
   }
+
   &__content {
     flex-basis: 48%;
   }
+
   &__text {
     max-width: 600px;
     color: $whiteColor;
+
     @include em(16);
+
     p {
       padding: 0;
       margin: 0;
     }
   }
+
   &__form {
     flex-basis: 48%;
     width: 100%;
@@ -26,6 +31,7 @@
     .container {
       flex-direction: row;
     }
+
     &__form {
       max-width: 480px;
     }

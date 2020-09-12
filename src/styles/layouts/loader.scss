@@ -5,23 +5,39 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('../img/texture.jpg');
+  background: url("../img/texture.jpg");
   background-size: cover;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    bottom: 0;
+    background: rgba(14, 12, 23, 0.75);
+  }
+
   &__svg {
     width: 300px;
+    position: relative;
+    z-index: 3;
   }
+
   &__absolute {
     position: absolute;
     left: 0;
-    top:0;
+    top: 0;
     width: 300px;
     overflow: hidden;
     animation: logoWidth 3s linear normal running 0s;
   }
+
   &__logo {
     position: relative;
   }
@@ -31,6 +47,7 @@
   0% {
     width: 0;
   }
+
   100% {
     width: 300px;
   }

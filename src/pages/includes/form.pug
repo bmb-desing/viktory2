@@ -2,6 +2,7 @@ form.form(action="#")
   .form__title Оставьте заявку и наш специалист свяжется с вами
   .form__item
     input.form__input(type="text" placeholder="Ваше имя*" name="name")
+    span.error ошибка
   .form__item
     input.form__input.form__input_phone(type="text" placeholder="Ваше телефон*" name="phone")
   .form__item.form__item_textarea
@@ -10,5 +11,5 @@ form.form(action="#")
     .form__wrap
       button(type="submit") Отправить
       .form__policy
-        p Отправляя заявку вы даёте согласие с 
+        p Отправляя заявку вы даёте согласие с
           a(href="politika.pdf" target="_blank") политикой конфендициальности
