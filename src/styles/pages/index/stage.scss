@@ -10,12 +10,13 @@
     margin: 0;
     line-height: 1;
 
-    @include em(24); }
+    @include em(24);
+  }
 
   &__number {
     position: absolute;
     right: 0;
-    top: - (104/2) + 0;
+    top: - (104/2) + 0em;
     background: linear-gradient(273.93deg, #a2874c -1.08%, #d5be6d 106%);
     font-family: $Cormorant;
     opacity: 0.25;
@@ -24,14 +25,16 @@
     font-weight: bold;
     line-height: 1;
 
-    @include em(104); }
+    @include em(104);
+  }
 
   &__text {
     margin: 0;
     padding: 0.5em 0 0;
     color: #0e0c17;
 
-    @include em(14); }
+    @include em(14);
+  }
 }
 
 @include media-custom(480px) {
@@ -47,10 +50,12 @@
 
     &__title {
 
-      @include em(32); }
+      @include em(32);
+    }
 
     &__text {
 
-      @include em(16); }
+      @include em(16);
+    }
   }
 }

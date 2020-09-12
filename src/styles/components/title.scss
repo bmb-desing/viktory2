@@ -52,7 +52,8 @@
     text-align: center;
     font-weight: 600;
 
-    @include em(28); }
+    @include em(28);
+  }
 
   &_left {
     text-align: left;
@@ -75,7 +76,8 @@
   .title {
     &_second {
 
-      @include em(40); }
+      @include em(40);
+    }
   }
 }
 
@@ -83,15 +85,18 @@
   .title {
     &_second {
 
-      @include em(56); }
+      @include em(56);
+    }
 
     &_services {
 
-      @include em(32); }
+      @include em(32);
+    }
 
     &_nav {
 
-      @include em(40); }
+      @include em(40);
+    }
   }
 }
 
@@ -99,7 +104,8 @@
   .title {
     &_services {
 
-      @include em(40); }
+      @include em(40);
+    }
 
     &_nav {
 

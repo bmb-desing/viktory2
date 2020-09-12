@@ -20,7 +20,8 @@
     font-family: $Circe;
     color: #ec0000;
 
-    @include em(12); }
+    @include em(12);
+  }
 
   &__button {
     display: flex;

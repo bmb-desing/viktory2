@@ -115,7 +115,8 @@
   .review {
     &__text {
 
-      @include em(24); }
+      @include em(24);
+    }
 
     &-button {
       display: block;

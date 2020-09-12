@@ -93,7 +93,8 @@
       opacity: 0.6;
       padding-right: 0.5em;
 
-      @include em(32); }
+      @include em(32);
+    }
 
     a {
       letter-spacing: 0.02em;
@@ -205,7 +206,8 @@
     &__left {
       span {
 
-        @include em(16); }
+        @include em(16);
+      }
     }
 
     &__right {

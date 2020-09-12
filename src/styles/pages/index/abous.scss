@@ -25,7 +25,8 @@
     line-height: 1.2;
     text-align: center;
 
-    @include em(22); }
+    @include em(22);
+  }
 
   &__image {
     position: relative;
@@ -74,7 +75,8 @@
   .about {
     &-second {
 
-      @include em(24); }
+      @include em(24);
+    }
   }
 }
 
@@ -82,7 +84,8 @@
   .about {
     &-second {
 
-      @include em(32); }
+      @include em(32);
+    }
 
     &__left {
       flex-basis: 55%;
@@ -113,7 +116,8 @@
   .about {
     &-second {
 
-      @include em(40); }
+      @include em(40);
+    }
   }
 }
 
@@ -121,6 +125,7 @@
   .about {
     &-second {
 
-      @include em(56); }
+      @include em(56);
+    }
   }
 }

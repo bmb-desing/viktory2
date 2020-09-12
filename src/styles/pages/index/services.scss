@@ -65,7 +65,8 @@
     padding-bottom: 1em;
     color: #0e0c17;
 
-    @include em(16); }
+    @include em(16);
+  }
 }
 
 @include media-custom(768px) {
@@ -87,7 +88,8 @@
     &__button {
       a {
 
-        @include em(14); }
+        @include em(14);
+      }
     }
 
     &__title {

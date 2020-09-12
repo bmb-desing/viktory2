@@ -98,7 +98,8 @@
       transition: all 0.5s;
     }
 
-    @include em(16); }
+    @include em(16);
+  }
 
   &__category {
     text-transform: uppercase;
